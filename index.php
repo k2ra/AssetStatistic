@@ -4,7 +4,8 @@
   	<body>
 		<?php
 		require_once('TwitterAPIExchange.php');
-
+		require_once('scrapTwitterName.php');
+		$scrapping = new Scrapping();
 
 		$settings = array(
 		    'oauth_access_token' => "286847247-EExFfE33wSeas2xjLk6SRZRggiFdJHTlt3woBK72",
@@ -29,6 +30,7 @@
 		          <th>marketcap</th>
 		          <th>supply</th>
 		          <th>change1h</th>
+		          <th>twittr</th>
 		        </thead>
 		          <tbody>
 
@@ -48,6 +50,7 @@
 			  echo '<td>'.$data[$key ]["market_cap_usd"].'</td>';
 			  echo '<td>'.$data[$key ]["total_supply"].'</td>';
 			  echo '<td>'.$data[$key ]["percent_change_1h"].'</td>';
+			  echo '<td>'.$scrapping->twitterFinder($data[$key ]["name"]).'</td>';
 			}
 		}
 
