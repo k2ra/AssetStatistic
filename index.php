@@ -38,10 +38,11 @@
 
 		                   
 		<?php
-
 		//print_r($data);
-		if(false != $data) {
+		/*if(false != $data) {
 			foreach ($data as $key => $value) {
+				$name = $data[$key ]["name"];
+//$twitter =$scrapping->twitterFinder("ethereum");
 				
 			  //echo ""$resp[$key ]['preguntas'];
 			  echo '<tr><td><b>'.$data[$key ]["name"].'</b></td>';
@@ -50,11 +51,22 @@
 			  echo '<td>'.$data[$key ]["market_cap_usd"].'</td>';
 			  echo '<td>'.$data[$key ]["total_supply"].'</td>';
 			  echo '<td>'.$data[$key ]["percent_change_1h"].'</td>';
-			  echo '<td>'.$scrapping->twitterFinder($data[$key ]["name"]).'</td>';
+			 // echo '<td>'.$twitter[0][0].'</td>';
 			}
+		}*/
+		$i = 0;
+
+		//while ($i < count($data)) {
+		while ($i <10) {
+			//print_r($data[$i]["id"]);
+			$twitter =$scrapping->twitterFinder($data[$i]["id"]);
+			echo $twitter;
+			//print_r($twitter);
+			$i++;
 		}
-
-
+		//echo count($data);
+//echo $twitter[0][0];
+	//	 print_r($scrapping->twitterFinder("ethereum"));
 		$url = 'https://api.twitter.com/1.1/users/search.json';
 		$getfield = '?q=krojas30';
 		//$getfield = '?screen_name=krojas30&skip_status=true&include_user_entities=false';        
@@ -72,7 +84,7 @@
 		 	print_r( $followers[$key]["name"]." ".$followers[$key]["screen_name"]." ".$followers[$key]["followers_count"]."<br>");
 		  }
 		  //echo $count;
-		 print_r(json_decode($json,true));
+		// print_r(json_decode($json,true));
 		?>
 		      </tbody>
 		 </table>                 
