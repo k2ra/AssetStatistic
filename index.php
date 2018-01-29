@@ -19,6 +19,14 @@
 		$html = file_get_contents($url);
 		$data = json_decode($html,true); 
 		//print_r($data); 
+
+		$url2 = 'https://min-api.cryptocompare.com/data/all/coinlist';
+		$html2 = file_get_contents($url2);
+		$data2 = json_decode($html2,true); 
+
+			foreach ($data2['Data'] as $key => $value) {
+			print_r($data2['Data'][$key]['Name']." ".$data2['Data'][$key]['CoinName']." ".$data2['Data'][$key]['Id']."<br>");
+			}
 		?>
 
 
@@ -54,7 +62,7 @@
 			 // echo '<td>'.$twitter[0][0].'</td>';
 			}
 		}*/
-		$i = 0;
+		/*$i = 0;
 
 		//while ($i < count($data)) {
 		while ($i <10) {
@@ -63,7 +71,7 @@
 			echo $twitter;
 			//print_r($twitter);
 			$i++;
-		}
+		}*/
 		//echo count($data);
 //echo $twitter[0][0];
 	//	 print_r($scrapping->twitterFinder("ethereum"));
