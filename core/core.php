@@ -5,7 +5,7 @@ session_start();
 define('DB_HOST','localhost');
 define('DB_USER','UserAsset');
 define('DB_PASS','UserAsset');
-define('DB_NAME','AssetsDB');
+define('DB_NAME','assetsDB');
 /*produccion
 define('DB_USER','solution_survey');
 define('DB_PASS','solution_survey');
@@ -17,6 +17,6 @@ define('APP_URL','http://'. $_SERVER['SERVER_NAME'].'/demos/AssetStatistic/');
 
 
 
-require('core/models/class.Conexion.php');
+require('models/class.Conexion.php');
 
 ?>
