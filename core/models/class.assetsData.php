@@ -23,5 +23,23 @@ class AssetsData
 	        }
 	}
 
+	public function listCoinById(){
+		$list = $this->db->query("SELECT id_token FROM tbl_assets");
+
+		if($this->db->rows($list) > 0) {
+				while($data = $this->db->recorrer($list)) {
+					$resp[] = array("id" => $data["id_token"]);
+				}
+				
+			}
+			else
+			{
+				$resp = false;
+				header('location: ?view=department&mode=add');
+			}
+			return $resp;
+
+	}
+
 }
 ?>
