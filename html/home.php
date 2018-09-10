@@ -8,10 +8,10 @@
 		$scrapping = new Scrapping();
 
 		$settings = array(
-		    'oauth_access_token' => "286847247-EExFfE33wSeas2xjLk6SRZRggiFdJHTlt3woBK72",
-		    'oauth_access_token_secret' => "BzITpCjWR0zQIFLTidXgzgGrOBZyyZsjPuMVDEZMgLedF",
-		    'consumer_key' => "K4YnsICogHxcnnaJPWfoZu8Jt",
-		    'consumer_secret' => "b3QJxiLr1njYQCWfvbCN1rPcpZM02qFR7xgHPIlN276vV9nkh6"
+		    'oauth_access_token' => "",
+		    'oauth_access_token_secret' => "",
+		    'consumer_key' => "",
+		    'consumer_secret' => ""
 		);
 
 
